@@ -33,7 +33,6 @@ import {
 } from "@/components/ui/select"
 import { toast } from "@/components/ui/use-toast"
 import { eventSchema } from "@/lib/validations"
-import { ScrollArea } from "@/components/ui/scroll-area"
 
 type FormData = {
   title: string
@@ -110,7 +109,7 @@ export function CreateEventButton() {
             Add a new event to your calendar.
           </DialogDescription>
         </DialogHeader>
-        <ScrollArea className="max-h-[60vh] overflow-y-auto px-1">
+        <div className="max-h-[60vh] overflow-y-auto px-1">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <FormField
@@ -247,8 +246,8 @@ export function CreateEventButton() {
               </DialogFooter>
             </form>
           </Form>
-        </ScrollArea>
+        </div>
       </DialogContent>
     </Dialog>
   )
-} 
+}
